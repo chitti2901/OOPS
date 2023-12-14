@@ -1,0 +1,63 @@
+class Employee
+{
+String name,add,mail;
+float id,mobile,basic;
+void salary()
+{
+float da,hra,pf,cf,gross;
+da=basic*97/100;
+hra=basic*10/100;
+pf=basic*12/100;
+cf=basic*0.1f/100;
+gross=basic+da+hra-pf-cf;
+System.out.println("Name :"+name);
+System.out.println("Basic Salary :"+basic);
+System.out.println("Gross Salary :"+gross);
+}
+}
+class Programmer extends Employee
+{
+Programmer(String name,int sal)
+{
+this.name=name;
+basic=sal;
+}
+}
+class Assistant_Proffesor extends Employee
+{
+Assistant_Proffesor(String name,int sal)
+{
+this.name=name;
+basic=sal;
+}
+}
+class Associate_Proffesor extends Employee
+{
+Associate_Proffesor(String name,int sal)
+{
+this.name=name;
+basic=sal;
+}
+}
+class Proffesor extends Employee
+{
+Proffesor(String name,int sal)
+{
+this.name=name;
+basic=sal;
+}
+}
+public class Inheritance
+{
+public static void main(String args[])
+{
+Assistant_Proffesor ast = new Assistant_Proffesor("Sanika",45000);
+ast.salary();
+Associate_Proffesor aso = new Associate_Proffesor("Sanu",20000);
+aso.salary();
+Proffesor po = new Proffesor("Sanav",50000);
+po.salary();
+Programmer pm = new Programmer("Sakshi",60000);
+pm.salary();
+}
+}
